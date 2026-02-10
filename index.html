@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equilibrium Foundation | Zukunft gemeinsam gestalten</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:italic&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-warm-bg: #fdfaf7;
+            --color-accent: #3fb0e3;
+            --color-nature: #4a5d23;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--color-warm-bg);
+            margin: 0;
+            color: #1a1412;
+            /* Emotionaler, heller Hintergrund (Kinder & Natur) */
+            background-image: linear-gradient(rgba(253, 250, 247, 0.6), rgba(253, 250, 247, 0.95)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2000&auto=format&fit=crop');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        .serif-italic {
+            font-family: 'Instrument Serif', serif;
+            font-style: italic;
+        }
+        .glass-warm {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+        }
+        .btn-shadow {
+            box-shadow: 0 10px 30px rgba(63, 176, 227, 0.3);
+        }
+        /* Fallback-Text zentriert und sichtbar machen */
+        #root:empty::after {
+            content: 'Equilibrium Foundation wird geladen...';
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #1a1412;
+            opacity: 0.5;
+        }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+        "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3"
+      }
+    }
+    </script>
+</head>
+<body class="overflow-x-hidden">
+    <div id="root"></div>
+    <!-- WICHTIG: Die Datei muss index.tsx heißen und im selben Verzeichnis liegen -->
+    <script type="module" src="./index.tsx"></script>
+</body>
+</html>

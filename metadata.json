@@ -1,0 +1,8 @@
+{
+  "name": "Equilibrium Foundation - Inklusion durch Technologie",
+  "description": "Ein modernes Webportal für die Equilibrium Foundation, das Software- und KI-Lösungen zur Integration von Gehörlosen und autistischen Menschen in den Arbeitsmarkt vorstellt.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

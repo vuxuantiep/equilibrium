@@ -1,0 +1,15 @@
+/*
+Theme Name: Equilibrium Foundation Social Theme
+Theme URI: https://equilibrium.foundation/
+Author: Equilibrium Team
+Description: Ein emotionales Theme mit Fokus auf weltweite Sozialarbeit, Natur und technologische Inklusion.
+Version: 1.1.0
+License: GNU General Public License v2 or later
+Text Domain: equilibrium-foundation
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1412;
+}
