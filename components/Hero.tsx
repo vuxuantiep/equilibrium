@@ -1,8 +1,11 @@
 
 import React from 'react';
-import { ArrowRight, Heart, Code, Globe, Sparkles, TreeDeciduous } from 'lucide-react';
+import { ArrowRight, Heart, TreeDeciduous } from 'lucide-react';
+import { CONTENT } from '../content';
 
 export const Hero: React.FC = () => {
+  const { images } = CONTENT.home.hero;
+
   return (
     <section className="relative min-h-screen flex flex-col justify-center pt-24 pb-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
@@ -36,22 +39,41 @@ export const Hero: React.FC = () => {
 
           <div className="lg:col-span-5">
             <div className="relative">
-              {/* Emotional Photo Mosaic */}
+              {/* Layout entspricht dem Screenshot: Links Großes Bild, Rechts Tech-Bild & Grüne Box */}
               <div className="grid grid-cols-2 gap-4 h-[550px]">
-                <div className="rounded-[2.5rem] overflow-hidden border-4 border-white shadow-2xl group relative h-full row-span-2">
-                  <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                
+                {/* Linke Spalte: Großes Hochformat-Bild (Kinder) */}
+                <div className="rounded-[2.5rem] overflow-hidden border-4 border-white shadow-2xl group relative h-full">
+                  <img 
+                    src={images.main} 
+                    alt="Community Impact" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>
-                <div className="rounded-[2.5rem] overflow-hidden border-4 border-white shadow-xl group relative h-[267px]">
-                  <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
-                  <div className="absolute inset-0 bg-nature-overlay opacity-20"></div>
+
+                {/* Rechte Spalte: 2 Elemente untereinander */}
+                <div className="flex flex-col gap-4 h-full">
+                   
+                   {/* Oben: Quadratisches Tech-Bild */}
+                   <div className="h-1/2 rounded-[2.5rem] overflow-hidden border-4 border-white shadow-xl group relative">
+                     <img 
+                       src={images.side} 
+                       alt="Tech Education" 
+                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
+                     />
+                     <div className="absolute inset-0 bg-[#3fb0e3]/10"></div>
+                   </div>
+
+                   {/* Unten: Grüne Box "100% Nachhaltig" */}
+                   <div className="h-1/2 rounded-[2.5rem] overflow-hidden border-4 border-white shadow-xl bg-[#4a5d23] flex flex-col items-center justify-center text-white relative group hover:bg-[#5a6d33] transition-colors">
+                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                     <TreeDeciduous size={48} className="mb-4" />
+                     <span className="block text-sm font-black uppercase tracking-[0.2em] shadow-black drop-shadow-md">100% Nachhaltig</span>
+                   </div>
+
                 </div>
-                <div className="rounded-[2.5rem] overflow-hidden border-4 border-white shadow-xl group relative bg-[#4a5d23] flex items-center justify-center p-8 text-white h-[267px]">
-                  <div className="text-center">
-                    <TreeDeciduous size={40} className="mx-auto mb-4" />
-                    <span className="block text-xs font-black uppercase tracking-widest">100% Nachhaltig</span>
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>

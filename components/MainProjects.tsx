@@ -1,32 +1,32 @@
 
 import React from 'react';
-import { GraduationCap, Cpu, Leaf, ArrowRight } from 'lucide-react';
+import { Users, Trophy, Recycle, ArrowRight } from 'lucide-react';
 
 export const MainProjects: React.FC = () => {
   const mainCards = [
     {
-      title: "IT-Bildung",
-      subtitle: "Software & Coding für Alle",
-      desc: "Wir bilden Gehörlose und autistische Menschen zu Profi-Entwicklern aus – für echte Inklusion im Job.",
-      icon: <GraduationCap size={40} />,
+      title: "Berufliche Inklusion",
+      subtitle: "Software & Coding in Guatemala",
+      desc: "Wir bilden Mayas mit Hörbehinderung in Guatemala darin, Softwareprogrammierer zu werden und ihren Lebensunterhalt im Team zu verdienen.",
+      icon: <Users size={40} />,
       color: "bg-[#3fb0e3]",
-      img: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=600&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=600&auto=format&fit=crop" // Workshop/Team Meeting
     },
     {
-      title: "KI-Werkzeuge",
-      subtitle: "Technik mit Empathie",
-      desc: "Eigene Software, die Barrieren abbaut und Kommunikation in Gebärdensprache digital übersetzt.",
-      icon: <Cpu size={40} />,
+      title: "Train-the-Trainer",
+      subtitle: "Sportförderung in Malawi",
+      desc: "Wir bilden und zertifizieren Trainer in Malawi, die körperliche Fähigkeiten und die Persönlichkeit benachteiligter Kinder entwickeln.",
+      icon: <Trophy size={40} />,
       color: "bg-[#0c94d2]",
-      img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?q=80&w=600&auto=format&fit=crop" // Kinder Fußball/Sandplatz
     },
     {
-      title: "Nachhaltigkeit",
-      subtitle: "Globaler Social Impact",
-      desc: "Umweltprojekte und Hilfe für Kinder in Afrika & Mittelamerika für eine lebenswerte Zukunft.",
-      icon: <Leaf size={40} />,
+      title: "Recycling & Fair Trade",
+      subtitle: "Handwerk in Angola",
+      desc: "Wir unterstützen Recycling, Handwerk und fairen Handel in Angola, um Einkommen zu generieren und die Umwelt zu schützen.",
+      icon: <Recycle size={40} />,
       color: "#4a5d23",
-      img: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=600&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1605289355680-75fbbee5c324?q=80&w=600&auto=format&fit=crop" // Nähen/Handwerk
     }
   ];
 
@@ -56,7 +56,7 @@ export const MainProjects: React.FC = () => {
                   {card.desc}
                 </p>
                 <button className="flex items-center space-x-3 text-[#1a1412] font-black group-hover:text-[#3fb0e3] transition-colors text-lg">
-                  <span>Projekt Details</span>
+                  <span>Weiterlesen</span>
                   <ArrowRight size={24} className="group-hover:translate-x-2 transition-transform" />
                 </button>
               </div>

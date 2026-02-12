@@ -1,9 +1,12 @@
 
 import React from 'react';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, Sprout } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { CONTENT } from '../content';
 
 export const Mission: React.FC = () => {
+  const { missionGallery } = CONTENT.home;
+
   return (
     <section id="mission" className="py-32 bg-[#4a5d23] relative overflow-hidden">
       {/* Dekorative Elemente im Hintergrund für Tiefe */}
@@ -45,44 +48,46 @@ export const Mission: React.FC = () => {
             </div>
           </div>
 
-          {/* Rechte Seite: Bild-Collage mit weißen Rahmen als Kontrast */}
+          {/* Rechte Seite: Bild-Collage angepasst an den Screenshot */}
           <div className="relative">
             <div className="grid grid-cols-12 gap-3 md:gap-4 items-center">
+              
+              {/* Spalte 1: 2 Bilder (Kinder & Hände) */}
               <div className="col-span-4 space-y-3 md:gap-4">
                 <div className="rounded-3xl overflow-hidden shadow-2xl aspect-square border-4 border-white/20 hover:border-white/40 transition-colors">
-                  <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=400&auto=format&fit=crop" alt="Impact 1" className="w-full h-full object-cover" />
+                  <img src={missionGallery.col1_top} alt="Impact Kids" className="w-full h-full object-cover" />
                 </div>
                 <div className="rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] border-4 border-white/20 hover:border-white/40 transition-colors">
-                  <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=400&auto=format&fit=crop" alt="Impact 2" className="w-full h-full object-cover" />
+                  <img src={missionGallery.col1_bottom} alt="Impact Nature" className="w-full h-full object-cover" />
                 </div>
               </div>
               
+              {/* Spalte 2: 2 Bilder (Klassenzimmer & Bucht) - Leicht versetzt */}
               <div className="col-span-4 space-y-3 md:gap-4 -translate-y-8">
                 <div className="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] border-4 border-white/20 hover:border-white/40 transition-colors">
-                   <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=400&auto=format&fit=crop" alt="Impact 3" className="w-full h-full object-cover" />
+                   <img src={missionGallery.col2_top} alt="Education" className="w-full h-full object-cover" />
                 </div>
                 <div className="rounded-3xl overflow-hidden shadow-inner aspect-square border-4 border-white transform scale-110 z-10 shadow-2xl">
-                   <img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=400&auto=format&fit=crop" alt="Impact 4" className="w-full h-full object-cover" />
-                </div>
-                <div className="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] border-4 border-white/20 hover:border-white/40 transition-colors">
-                   <img src="https://images.unsplash.com/photo-1523240632013-da209f354a0b?q=80&w=400&auto=format&fit=crop" alt="Impact 5" className="w-full h-full object-cover" />
+                   <img src={missionGallery.col2_bottom} alt="Environment" className="w-full h-full object-cover" />
                 </div>
               </div>
 
+              {/* Spalte 3: 1 Bild (Fußball) & Text Box */}
               <div className="col-span-4 space-y-3 md:gap-4">
                 <div className="rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] border-4 border-white/20 hover:border-white/40 transition-colors">
-                  <img src="https://images.unsplash.com/photo-1518604666860-9ed391f76460?q=80&w=400&auto=format&fit=crop" alt="Impact 6" className="w-full h-full object-cover" />
+                  <img src={missionGallery.col3_top} alt="Sports" className="w-full h-full object-cover" />
                 </div>
-                <div className="rounded-3xl overflow-hidden shadow-2xl aspect-square border-4 border-white/20 hover:border-white/40 transition-colors">
-                  <img src="https://images.unsplash.com/photo-1518107616385-ad30833edec1?q=80&w=400&auto=format&fit=crop" alt="Impact 7" className="w-full h-full object-cover" />
+                
+                {/* Grüne Box aus dem Screenshot */}
+                <div className="rounded-3xl overflow-hidden shadow-2xl aspect-square bg-[#3a4a1c] border-4 border-white/10 flex flex-col items-center justify-center p-4 relative group hover:bg-[#4a5d23] transition-colors">
+                   <Sprout size={32} className="text-white/30 mb-auto ml-auto" />
+                   <div className="text-center mt-auto mb-6">
+                      <span className="block text-[10px] font-black uppercase tracking-[0.2em] text-[#3fb0e3] mb-1">Gelebte</span>
+                      <span className="serif-italic text-2xl text-stone-100">Inklusion</span>
+                   </div>
                 </div>
               </div>
-            </div>
-            
-            {/* Badge */}
-            <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-[2rem] shadow-2xl border border-stone-100 hidden md:block animate-pulse">
-              <div className="text-[#3fb0e3] font-black text-xs uppercase tracking-widest mb-1 text-center">Gelebte</div>
-              <div className="serif-italic text-[#4a5d23] text-3xl italic text-center">Inklusion</div>
+
             </div>
           </div>
 
