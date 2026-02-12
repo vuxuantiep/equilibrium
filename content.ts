@@ -27,8 +27,7 @@ export const CONTENT = {
       primaryCta: "Jetzt fördern",
       secondaryCta: "Unsere Projekte",
       images: [
-        "/images/Folie1.jpg",
-        
+        "/images/Folie1.jpg", "/images/06.10.20.-wonder-koding-collage-1.jpg", "/images/africrops-logo.png",
         "/images/Equilibrium-Foundation-Team-e1666215969685.png"
       ]
     },
@@ -57,28 +56,28 @@ export const CONTENT = {
     details: [
       {
         title: "Unsere Prinzipien",
-        img: "https://equilibrium.foundation/home/wp-content/uploads/2021/01/principles-diagram.png",
+        img: "/images/Unbenannt3-e1666218653252.png",
         text: "Alle Aktivitäten der Equilibrium Foundation basieren auf den grundlegenden Prinzipien des Humanismus, der Ethik und des Positivismus. Aufbauend auf diesen Werten fördern wir eine nachhaltige Stärkung benachteiligter Menschen im globalen Süden.",
         linkText: "Weiterlesen",
         link: "/prinzipien"
       },
       {
         title: "Unser Team",
-        img: "https://equilibrium.foundation/home/wp-content/uploads/2021/01/team-mosaic.png",
+        img: "/images/Team-Collage-Stand-24_02_21-e1666215865602.png",
         text: "Jeder unserer leidenschaftlichen Aktivisten im Team bringt seine individuellen Stärken ein, um eine gerechtere Welt zu schaffen. Unsere Expertise und Fähigkeiten reichen von Pädagogik, Bildung, Management, Beratung bis hin zu Wissenschaft und Informationstechnologie.",
         linkText: "Weiterlesen",
         link: "/team"
       },
       {
         title: "Wie wir arbeiten",
-        img: "https://equilibrium.foundation/home/wp-content/uploads/2021/01/work-model.png",
+        img: "/images/Unbenannt-e1666220204130.png",
         text: "Die Equilibrium Foundation wendet ihr selbstentwickeltes Kollaborationsmodell an (unter Berücksichtigung internationaler Standards), das die Logik von drei wegweisenden Modellen kombiniert: 1. Social Business Excellence Model, 2. das Project Logic Model und 3. den Standard-Projektlebenszyklus.",
         linkText: "Weiterlesen",
         link: "/methode"
       },
       {
         title: "Transparenz",
-        img: "https://equilibrium.foundation/home/wp-content/uploads/2021/01/transparency-logo.png",
+        img: "/images/Folie5.jpg",
         text: "Die Equilibrium Foundation kommuniziert transparent ihre Herkunft, Prinzipien, Governance und Eigentumsstruktur, Ziele, Aktivitätsberichte, Spender, Herkunft und Verwendung von Mitteln. Aus diesem Grund sind wir freiwillig der Transparent Civil Society Initiative beigetreten.",
         linkText: "Weiterlesen",
         link: "/transparenz"
@@ -110,14 +109,14 @@ export const CONTENT = {
           subtitle: "Malawi: Ausbildung lokaler Jugendfußballtrainer",
           text: "Gemeinsam mit dem Malawi Football Association fördern wir die Ausbildung von Fußballtrainern. Nun wurde eine örtliche Kinderliga und eine Talentakademie gegründet, in der die ausgebildeten Trainer altersgerechte Fußballtrainingsmethoden anwenden, um benachteiligte Kinder zu fördern.",
           link: "https://equilibrium.foundation/malawi-football-training/",
-          img: "https://images.unsplash.com/photo-1518604666860-9ed391f76460?q=80&w=800&auto=format&fit=crop"
+          img: "/images/03-scaled-e1666219641742.jpg"
         },
         {
           title: "Gehörlose Mayas in Guatemala",
           subtitle: "Berufliche Ausbildung zu Softwareprogrammierern",
           text: "Wir ermöglichen berufliche Ausbildung für eine Gruppe von Mayas mit Hörbehinderungen, um Softwareprogrammierer in Guatemala zu werden. Dieses innovative Programm ermöglicht es den Teilnehmern, mit IT-Experten im Team zusammenzuarbeiten, um Projekte auf der ganzen Welt durchzuführen und ihren Lebensunterhalt zu verdienen.",
           link: "https://equilibrium.foundation/vocational-training-guatemala/",
-          img: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop"
+          img: "/images/Folie2.jpg"
         }
       ]
     },
@@ -128,28 +127,28 @@ export const CONTENT = {
           sector: "Inklusion",
           subtitle: "Trainerkarriere in der Mongolei",
           text: "Die Equilibrium Foundation schätzt die Unterschiede der Menschen und stärkt ihr volles Potenzial. Durch Schulungen für Coaches und Organisationen schaffen wir Umgebungen, in denen alle fair behandelt werden.",
-          img: "https://images.unsplash.com/photo-1523240632013-da209f354a0b?q=80&w=600&auto=format&fit=crop",
+          img: "/images/Folie3.jpg",
           link: "/inklusion-mongolei"
         },
         {
           sector: "Minderheitenrechte",
           subtitle: "Mikrokreditfinanzierter Booth",
           text: "Wir machen die Stimmen lokaler Minderheiten und indigener Menschen hörbar. Durch Mikrokredite und partizipative Workshops fördern wir ihre Rechte und ermöglichen sozialen Wandel.",
-          img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=600&auto=format&fit=crop",
+          img: "/images/Folie4.jpg",
           link: "/microcredit-project"
         },
         {
           sector: "Organisationsentwicklung",
           subtitle: "Ansatz der Organisationsentwicklung",
           text: "Wir fördern partizipativen Wandel und unterstützen Partnerorganisationen dabei, ihre Fähigkeit zur Anpassung zu stärken und größere Effektivität zu erreichen.",
-          img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop",
+          img: "/images/Folie5.jpg",
           link: "/social-start-up"
         },
         {
           sector: "Sportpädagogik",
           subtitle: "Fußballtrainingslager Malawi",
           text: "Sport durchbricht Barrieren. Wir bringen Menschen zusammen und schulen sie in neuesten Techniken, um ihre gesellschaftliche Teilhabe und Kompetenz zu stärken.",
-          img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop",
+          img: "/images/Folie6.jpg",
           link: "/sports-projects"
         }
       ]
