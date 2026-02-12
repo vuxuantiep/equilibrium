@@ -3,7 +3,7 @@ export const CONTENT = {
   brand: {
     name: "EQUILIBRIUM",
     suffix: "FOUNDATION",
-    logoUrl: "https://equilibrium.foundation/home/wp-content/uploads/2021/03/Logo_Equilibrium_Foundation.png",
+    logoUrl: "/images/cropped-EQUILIBRIUM-FOUNDATION-Gross.jpg",
     colors: {
       primary: "#3fb0e3",
       primaryHover: "#60c5f1",
@@ -27,9 +27,9 @@ export const CONTENT = {
       primaryCta: "Jetzt fördern",
       secondaryCta: "Unsere Projekte",
       images: [
-        "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=800&auto=format&fit=crop",
+        "/images/Folie1.jpg",
         
-        "https://equilibrium.foundation/wp-content/uploads/2021/03/Unbenannt4-e1666213054604.png"
+        "/images/Equilibrium-Foundation-Team-e1666215969685.png"
       ]
     },
     mission: {
