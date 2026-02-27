@@ -13,13 +13,13 @@ export const Gallery: React.FC = () => {
     {
       title: "Inklusive Bildung",
       desc: "Vermittlung des Fingeralphabets und Gebärdensprache als Schlüssel zur Welt.",
-      icon: <Languages className="text-[#4a5d23]" />,
+      icon: <Languages className="text-[#ea580c]" />,
       img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop"
     },
     {
       title: "Lokale Wurzeln",
       desc: "Wir arbeiten in der Mongolei, Afrika und Mittelamerika direkt mit der Gemeinschaft.",
-      icon: <MapPin className="text-[#4a5d23]" />,
+      icon: <MapPin className="text-[#ea580c]" />,
       img: "https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=800&auto=format&fit=crop"
     },
     {
@@ -35,7 +35,7 @@ export const Gallery: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center space-x-2 text-[#4a5d23] font-black uppercase tracking-widest text-sm mb-4">
+            <div className="inline-flex items-center space-x-2 text-[#ea580c] font-black uppercase tracking-widest text-sm mb-4">
               <ImageIcon size={20} />
               <span>Unsere Wirkung weltweit</span>
             </div>

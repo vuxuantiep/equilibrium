@@ -10,6 +10,7 @@ import News from './pages/News';
 import Donation from './pages/Donation';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -21,24 +22,26 @@ const ScrollToTop = () => {
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/wer-wir-sind" element={<WhoWeAre />} />
-            <Route path="/was-wir-tun" element={<WhatWeDoPage />} />
-            <Route path="/engagieren" element={<GetInvolved />} />
-            <Route path="/netzwerk" element={<Network />} />
-            <Route path="/nachrichten" element={<News />} />
-            <Route path="/spenden" element={<Donation />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <LanguageProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/wer-wir-sind" element={<WhoWeAre />} />
+              <Route path="/was-wir-tun" element={<WhatWeDoPage />} />
+              <Route path="/engagieren" element={<GetInvolved />} />
+              <Route path="/netzwerk" element={<Network />} />
+              <Route path="/nachrichten" element={<News />} />
+              <Route path="/spenden" element={<Donation />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </LanguageProvider>
   );
 };
 

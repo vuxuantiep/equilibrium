@@ -9,8 +9,8 @@ export const Projects: React.FC = () => {
       description: "Berufliche Ausbildung für Gehörlose und Autisten. Wir entwickeln eigene KI-Schnittstellen, die Barrieren am Arbeitsplatz eliminieren.",
       tag: "Technologie",
       icon: <Code2 className="text-white" size={32} />,
-      color: "bg-[#4a5d23]",
-      accent: "text-[#4a5d23]",
+      color: "bg-[#ea580c]",
+      accent: "text-[#ea580c]",
       img: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop"
     },
     {
@@ -37,11 +37,11 @@ export const Projects: React.FC = () => {
     <section id="projekte" className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-24">
-          <h2 className="text-[#4a5d23] font-black uppercase tracking-widest text-sm mb-4">Wirkungsbereiche</h2>
+          <h2 className="text-[#ea580c] font-black uppercase tracking-widest text-sm mb-4">Wirkungsbereiche</h2>
           <h3 className="text-4xl md:text-6xl font-black text-[#2a1f18] leading-tight mb-8">
             Lösungen für eine <br /> <span className="text-[#c05a11]">gerechtere Welt</span>.
           </h3>
-          <div className="w-24 h-1 bg-[#4a5d23] mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-[#ea580c] mx-auto rounded-full"></div>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-12">

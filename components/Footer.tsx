@@ -1,12 +1,13 @@
 
 import React from 'react';
-// Fix: Import Link from react-router-dom to enable navigation in the footer
 import { Link } from 'react-router-dom';
 import { Mail, MapPin, Twitter, Linkedin, Instagram, Heart } from 'lucide-react';
-import { CONTENT } from '../content';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export const Footer: React.FC = () => {
-  const { footer, brand } = CONTENT;
+  const { content } = useLanguage();
+  const { footer, brand } = content;
+
   return (
     <footer id="footer" className="bg-[#fdfaf7] text-stone-600 py-32 border-t border-stone-200">
       <div className="max-w-7xl mx-auto px-6">
@@ -34,35 +35,46 @@ export const Footer: React.FC = () => {
           </div>
           
           <div className="md:col-span-3">
-            <h5 className="text-[#1a1412] font-black text-xs mb-10 uppercase tracking-[0.3em]">Kapitel</h5>
+            <h5 className="text-[#1a1412] font-black text-xs mb-10 uppercase tracking-[0.3em]">{footer.chapters}</h5>
             <ul className="space-y-6 font-bold text-lg">
-              {CONTENT.navigation.slice(0, 4).map(item => (
+              {content.navigation.slice(0, 4).map(item => (
                 <li key={item.path}><Link to={item.path} className="hover:text-[#3fb0e3] transition-colors">{item.name}</Link></li>
               ))}
             </ul>
           </div>
 
           <div className="md:col-span-4">
-            <h5 className="text-[#1a1412] font-black text-xs mb-10 uppercase tracking-[0.3em]">Kontakt</h5>
-            <div className="bg-white p-10 rounded-[3rem] border border-stone-200 space-y-10 shadow-xl">
-              <div className="flex items-start space-x-5">
-                <div className="bg-[#3fb0e3]/10 p-3 rounded-xl">
+            <h5 className="text-[#1a1412] font-black text-xs mb-10 uppercase tracking-[0.3em]">{footer.contact}</h5>
+            
+            {/* Kontakt Karten Layout gemäß Screenshot */}
+            <div className="space-y-4">
+              
+              {/* Email Card */}
+              <div className="bg-white p-5 rounded-[2rem] border border-stone-100 shadow-xl flex items-center space-x-5 hover:-translate-y-1 transition-transform">
+                <div className="bg-[#e0f2fe] p-3 rounded-2xl flex-shrink-0">
                   <Mail size={24} className="text-[#3fb0e3]" />
                 </div>
                 <div>
                   <div className="text-[10px] font-black uppercase tracking-widest text-stone-400 mb-1">Email</div>
-                  <a href={`mailto:${footer.email}`} className="font-bold text-xl text-[#1a1412]">{footer.email}</a>
+                  <a href={`mailto:${footer.email}`} className="font-bold text-lg text-[#1a1412] hover:text-[#3fb0e3] transition-colors block leading-tight">
+                    {footer.email}
+                  </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-5">
-                <div className="bg-[#4a5d23]/10 p-3 rounded-xl">
-                  <MapPin size={24} className="text-[#4a5d23]" />
+
+              {/* Address Card */}
+              <div className="bg-white p-5 rounded-[2rem] border border-stone-100 shadow-xl flex items-center space-x-5 hover:-translate-y-1 transition-transform">
+                <div className="bg-[#ffedd5] p-3 rounded-2xl flex-shrink-0">
+                  <MapPin size={24} className="text-[#ea580c]" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-black uppercase tracking-widest text-stone-400 mb-1">{footer.city}</div>
-                  <span className="font-bold text-xl text-[#1a1412]">{footer.address}</span>
+                  <div className="text-[10px] font-black uppercase tracking-widest text-stone-400 mb-1">Hamburg</div>
+                  <span className="font-bold text-lg text-[#1a1412] block leading-tight whitespace-pre-line">
+                    {footer.address}
+                  </span>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -70,10 +82,10 @@ export const Footer: React.FC = () => {
         <div className="pt-16 border-t border-stone-200 flex flex-col md:flex-row justify-between items-center gap-12">
           <div className="flex items-center space-x-2 text-[11px] font-black uppercase tracking-[0.2em] text-stone-400">
              <Heart size={14} className="text-[#3fb0e3]" />
-             <span>Partners: Kiez Helden • Bingo! Umwelt • NUE</span>
+             <span>{footer.partners}</span>
           </div>
           <p className="text-[10px] font-bold text-stone-400 uppercase tracking-[0.3em]">
-            &copy; {new Date().getFullYear()} {brand.name} Foundation gGmbH.
+            &copy; {new Date().getFullYear()} {brand.name} {footer.copyright}.
           </p>
         </div>
       </div>

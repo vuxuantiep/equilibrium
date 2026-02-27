@@ -1,10 +1,11 @@
 
 import React, { useState } from 'react';
 import { Heart, Copy, Check, Building2, Globe, CreditCard } from 'lucide-react';
-import { CONTENT } from '../content';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Donation: React.FC = () => {
-  const { donationPage } = CONTENT;
+  const { content, language } = useLanguage();
+  const { donationPage } = content;
   const [amount, setAmount] = useState<string>("20");
   const [interval, setInterval] = useState<'once' | 'monthly' | 'annually'>('monthly');
   const [copied, setCopied] = useState(false);
@@ -16,7 +17,7 @@ const Donation: React.FC = () => {
   };
 
   return (
-    <div className="pt-32 animate-in fade-in duration-1000 bg-[#fdfaf7]">
+    <div key={language} className="pt-32 animate-in fade-in duration-1000 bg-[#fdfaf7]">
       
       {/* 1. HERO SECTION */}
       <section className="px-6 max-w-7xl mx-auto mb-20">
@@ -53,15 +54,15 @@ const Donation: React.FC = () => {
                    <div className="bg-[#3fb0e3]/10 p-4 rounded-2xl">
                       <CreditCard size={32} className="text-[#3fb0e3]" />
                    </div>
-                   <h2 className="text-3xl font-black text-[#1a1412]">Online Spenden</h2>
+                   <h2 className="text-3xl font-black text-[#1a1412]">Online Donation</h2>
                 </div>
 
                 {/* Interval Selector */}
                 <div className="bg-stone-50 p-2 rounded-2xl flex mb-10 relative z-10">
                    {[
-                      { id: 'once', label: 'Einmalig' },
-                      { id: 'monthly', label: 'Monatlich' },
-                      { id: 'annually', label: 'Jährlich' }
+                      { id: 'once', label: 'Once' },
+                      { id: 'monthly', label: 'Monthly' },
+                      { id: 'annually', label: 'Annually' }
                    ].map(opt => (
                       <button 
                         key={opt.id}
@@ -93,17 +94,17 @@ const Donation: React.FC = () => {
                       value={amount}
                       onChange={(e) => setAmount(e.target.value)}
                       className="w-full bg-white border-2 border-stone-100 rounded-2xl py-6 pl-12 pr-6 text-2xl font-black text-[#1a1412] focus:border-[#3fb0e3] outline-none transition-colors shadow-inner"
-                      placeholder="Eigener Betrag"
+                      placeholder="Custom Amount"
                    />
                    <span className="absolute left-6 top-1/2 -translate-y-1/2 text-stone-400 text-xl font-bold">€</span>
                 </div>
 
                 <button className="w-full bg-[#1a1412] hover:bg-[#3fb0e3] text-white py-6 rounded-2xl font-black text-xl shadow-2xl transition-all active:scale-95 flex items-center justify-center space-x-3 relative z-10">
                    <Heart size={24} className="fill-current text-[#e07a7a]" />
-                   <span>Jetzt Spenden</span>
+                   <span>{content.general.donate} Now</span>
                 </button>
                 <div className="mt-6 text-center text-stone-400 text-xs font-bold uppercase tracking-widest">
-                   Sicher bezahlen via PayPal & Kreditkarte
+                   Secure payment via PayPal & Credit Card
                 </div>
              </div>
           </div>
@@ -111,8 +112,8 @@ const Donation: React.FC = () => {
           {/* RIGHT: Info Cards (German & US) */}
           <div className="lg:col-span-5 space-y-8">
              
-             {/* German Bank Details - Styled as Trust Card */}
-             <div className="bg-[#4a5d23] text-white p-10 rounded-[3rem] shadow-xl relative overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
+             {/* German Bank Details - Dunkelblau, einheitlich mit anderen Abschnitten */}
+             <div className="bg-[#0c4a6e] text-white p-10 rounded-[3rem] shadow-xl relative overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
                 <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full blur-3xl -mr-10 -mt-10 transition-transform group-hover:scale-150"></div>
                 
                 <div className="flex items-center space-x-4 mb-8 relative z-10">
@@ -128,7 +129,7 @@ const Donation: React.FC = () => {
 
                 <div className="space-y-6 relative z-10">
                    <div>
-                     <p className="text-[10px] font-black uppercase tracking-widest text-stone-300 mb-1">Empfänger</p>
+                     <p className="text-[10px] font-black uppercase tracking-widest text-stone-300 mb-1">Holder</p>
                      <p className="font-bold text-lg">{donationPage.german.bankDetails.holder}</p>
                    </div>
                    <div>
@@ -137,9 +138,9 @@ const Donation: React.FC = () => {
                    </div>
                    
                    <div className="bg-black/20 rounded-2xl p-4 backdrop-blur-sm cursor-pointer group/copy hover:bg-black/30 transition-colors" onClick={handleCopy}>
-                     <p className="text-[10px] font-black uppercase tracking-widest text-stone-300 mb-2">IBAN (Klicken zum Kopieren)</p>
+                     <p className="text-[10px] font-black uppercase tracking-widest text-stone-300 mb-2">IBAN (Click to Copy)</p>
                      <div className="flex items-center justify-between">
-                        <p className="font-mono text-xl tracking-wider truncate mr-4 text-[#c7d5a0]">{donationPage.german.bankDetails.iban}</p>
+                        <p className="font-mono text-xl tracking-wider truncate mr-4 text-[#fed7aa]">{donationPage.german.bankDetails.iban}</p>
                         {copied ? <Check size={20} className="text-green-400" /> : <Copy size={20} className="text-white/50 group-hover/copy:text-white transition-colors" />}
                      </div>
                    </div>
@@ -162,7 +163,7 @@ const Donation: React.FC = () => {
                 <div className="bg-[#fdfaf7] border border-stone-100 p-6 rounded-3xl mb-8">
                    <p className="text-xs font-black text-[#f37021] uppercase tracking-widest mb-3 flex items-center gap-2">
                      <span className="w-2 h-2 rounded-full bg-[#f37021]"></span>
-                     Wichtiger Hinweis
+                     Important Note
                    </p>
                    <p className="text-sm text-stone-600 mb-4 font-medium">{donationPage.us.important}</p>
                    <div className="bg-white p-4 rounded-xl border border-stone-200 font-mono text-sm font-bold text-center text-[#1a1412] shadow-sm select-all">

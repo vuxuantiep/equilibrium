@@ -36,7 +36,7 @@ export const WhatWeDo: React.FC = () => {
               <span>Strategischer Ansatz</span>
             </div>
             <h3 className="text-4xl md:text-6xl font-black text-[#2a1f18] mb-8 leading-tight">
-              Wir investieren in <br /> <span className="text-[#4a5d23]">Nachhaltigkeit</span>.
+              Wir investieren in <br /> <span className="text-[#ea580c]">Nachhaltigkeit</span>.
             </h3>
             <p className="text-xl text-stone-600 mb-12 leading-relaxed font-medium">
               Durch unsere Aktivitäten stärken wir die Leistung lokaler Partner im globalen Süden, um deren Autonomie langfristig zu sichern.
@@ -49,8 +49,8 @@ export const WhatWeDo: React.FC = () => {
                 "Fokus auf skalierbare KI-Software"
               ].map((item, i) => (
                 <div key={i} className="flex items-center space-x-4 bg-white p-5 rounded-2xl shadow-sm border border-stone-100">
-                  <div className="bg-[#4a5d23]/10 p-2 rounded-full">
-                    <CheckCircle2 className="text-[#4a5d23]" size={20} />
+                  <div className="bg-[#ea580c]/10 p-2 rounded-full">
+                    <CheckCircle2 className="text-[#ea580c]" size={20} />
                   </div>
                   <span className="text-[#2a1f18] font-bold text-lg">{item}</span>
                 </div>
@@ -61,7 +61,7 @@ export const WhatWeDo: React.FC = () => {
           <div className="grid sm:grid-cols-2 gap-6">
             {activities.map((act, i) => (
               <div key={i} className="p-10 bg-white rounded-[2.5rem] shadow-sm border border-stone-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group">
-                <div className="w-16 h-16 bg-[#4a5d23] text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-[#4a5d23]/20 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-[#ea580c] text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-[#ea580c]/20 group-hover:scale-110 transition-transform">
                   {act.icon}
                 </div>
                 <h4 className="text-2xl font-bold text-[#2a1f18] mb-4">{act.title}</h4>

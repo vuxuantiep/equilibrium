@@ -21,7 +21,7 @@ export const TeamSection: React.FC = () => {
             </p>
             <div className="flex items-center space-x-4 text-[#c7d5a0] font-bold">
               <Globe size={24} />
-              <span>Berlin • Guatemala City • Remote Worldwide</span>
+              <span>Hamburg • Guatemala City • Remote Worldwide</span>
             </div>
           </div>
           <div className="lg:w-1/2 relative min-h-[400px]">
